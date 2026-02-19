@@ -2,11 +2,11 @@ import React from "react";
 import "./About.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
-import heroImage from "../../assets/about.jpg";
+import heroImage from "../../assets/about.webp";
 import Footer from "../../Components/Footer/Footer";
 
-import aboutImgLeft from "../../assets/about1.jpg";
-import aboutImgRight from "../../assets/about2.jpg";
+import aboutImgLeft from "../../assets/about1.webp";
+import aboutImgRight from "../../assets/about2.webp";
 import Location from "../../Components/Location/Location";
 
 const About = () => {

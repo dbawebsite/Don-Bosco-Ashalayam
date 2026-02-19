@@ -2,7 +2,7 @@ import React from "react";
 import "./Gallery.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
-import heroImage from "../../assets/about.jpg";
+import heroImage from "../../assets/gallery.webp";
 import Footer from "../../Components/Footer/Footer";
 
 const Gallery = () => {
@@ -12,7 +12,7 @@ const Gallery = () => {
             <Hero
                 backgroundImage={heroImage}
                 title="Gallery"
-                tagline="A few glimpses"
+                tagline="A few glimpses in our ashalayam"
             />
             <Footer />
         </>
