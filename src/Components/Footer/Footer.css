@@ -1,0 +1,64 @@
+.appfooter {
+    width: 100%;
+    background-color: #110d1d;
+    padding: 32px;
+}
+
+.footertext {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 12px;
+    height: 120px;
+    padding: 0 10%;
+}
+
+.footleft,
+.footright {
+    flex: 1;
+    background-color: transparent;
+}
+
+.dbaname {
+    background-color: transparent;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+.dbaemail,
+.dbaaddress {
+    background-color: transparent;
+    text-align: right;
+    color: #fafafa;
+    font-size: 14px;
+}
+
+.dbaemail {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: transparent;
+    color: #ccc;
+    font-size: 12px;
+}
+
+@media (max-width: 728px) {
+    .dbaname {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 444px) {
+    .dbaname {
+        font-size: 18px;
+    }
+    .dbaemail,
+    .dbaaddress {
+        font-size: 12px;
+    }
+}

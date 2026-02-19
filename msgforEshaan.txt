@@ -1,6 +1,0 @@
-Hello
-
-Please take care of responsiveness of the parts you made :D
-
-Only frontend website, have to teach staff to easily make changes for their "blog or content" area.
-Have it as a seperate component OUTSIDE in the root location maybe so less chances of their staff making a mistake and messing up the website.

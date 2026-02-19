@@ -1,0 +1,173 @@
+.db-about {
+    padding: 48px 10%;
+    box-sizing: border-box;
+}
+
+.db-about__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.db-about__title {
+    margin: 0;
+    font-size: 28px;
+    color: #06283d;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.db-about__intro {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+.db-about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 6px;
+}
+
+.db-about__card {
+    background-color: #dbeeff;
+    border: 2px solid #0a0a0a;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.db-about__card-title {
+    margin: 0;
+    font-size: 18px;
+    color: #25344f;
+    background-color: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.db-about__card-body {
+    margin: 0;
+    color: #25344f;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.db-about__features {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 22px;
+}
+
+.db-about__feature {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.db-about__feature--reverse {
+    flex-direction: row-reverse;
+}
+
+.db-about__feature-img {
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #0a0a0a;
+    display: block;
+}
+
+.db-about__feature-content {
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.db-about__feature-title {
+    margin: 0;
+    font-size: 20px;
+    color: #25344f;
+    font-weight: 700;
+}
+
+.db-about__feature-text {
+    margin: 0;
+    color: #25344f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .db-about__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .db-about__feature-img {
+        width: 46%;
+    }
+
+    .db-about__feature-content {
+        width: 54%;
+    }
+}
+
+@media (max-width: 600px) {
+    .db-about {
+        padding: 32px 16px;
+    }
+
+    .db-about__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .db-about__title {
+        font-size: 24px;
+    }
+
+    .db-about__intro {
+        font-size: 14px;
+    }
+
+    .db-about__card {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .db-about__card-title {
+        font-size: 16px;
+    }
+
+    .db-about__card-body {
+        font-size: 14px;
+    }
+
+    /* Stack feature blocks on small screens */
+    .db-about__feature,
+    .db-about__feature--reverse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .db-about__feature-img,
+    .db-about__feature-content {
+        width: 100%;
+    }
+
+    .db-about__feature-img {
+        margin-bottom: 10px;
+    }
+}
