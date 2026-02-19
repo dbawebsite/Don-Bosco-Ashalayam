@@ -4,6 +4,7 @@ import Hero from "./Components/Hero/Hero";
 import heroImage from "./assets/hero.jpg";
 import Footer from "./Components/Footer/Footer";
 import Location from "./Components/Location/Location";
+import Blog from "./Components/Blog/Blog";
 
 const App = () => {
     return (
@@ -14,6 +15,9 @@ const App = () => {
                 title="Don Bosco Ashalayam"
                 tagline="A home. A future."
             />
+
+            <Blog />
+
             <Location />
             <Footer />
         </>
