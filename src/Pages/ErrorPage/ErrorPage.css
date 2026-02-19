@@ -1,0 +1,30 @@
+.errorpage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.errorpage h1 {
+    font-size: 84px;
+    margin-bottom: 24px;
+}
+
+.errorpage a {
+    background-color: #ff7722;
+    color: #fafafa;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.5s all ease;
+}
+
+.errorpage a:hover,
+.errorpage a:focus {
+    background-color: #b35318;
+    outline: none;
+}

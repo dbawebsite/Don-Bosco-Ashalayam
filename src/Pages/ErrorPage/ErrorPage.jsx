@@ -7,7 +7,12 @@ const ErrorPage = () => {
     return (
         <>
             <Navbar />
-            <h1>Error Page Oops</h1>
+            <div className="errorpage">
+                <h1>Page Does Not Exist</h1>
+                <a role="gotohome" href="/">
+                    Back to Home
+                </a>
+            </div>
             <Footer />
         </>
     );
