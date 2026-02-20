@@ -52,28 +52,32 @@ const Blog = () => {
     }
 
     const { title, content, image } = post.fields;
-    const imageUrl = post.fields.image?.fields?.file?.url
-        ? `https:${post.fields.image.fields.file.url}`
+
+    const imageUrl = image?.fields?.file?.url
+        ? `https:${image.fields.file.url}?w=1200`
         : "";
 
     return (
         <section className="db-blog">
             <div className="db-blog__container">
-                <div className="db-blog__image-wrapper">
-                    {imageUrl && (
+                <h2 className="db-blog__section-heading">
+                    Read Our Latest Post Below
+                </h2>
+
+                <h3 className="db-blog__title">{title}</h3>
+
+                {imageUrl && (
+                    <div className="db-blog__image-wrapper">
                         <img
                             src={imageUrl}
                             alt={image.fields.title || title}
                             className="db-blog__image"
                         />
-                    )}
-                </div>
-
-                <div className="db-blog__content">
-                    <h2 className="db-blog__title">{title}</h2>
-                    <div className="db-blog__text">
-                        {documentToReactComponents(content)}
                     </div>
+                )}
+
+                <div className="db-blog__text">
+                    {documentToReactComponents(content)}
                 </div>
             </div>
         </section>

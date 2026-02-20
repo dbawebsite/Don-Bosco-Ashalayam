@@ -96,7 +96,7 @@ export default function Navbar() {
                             <a
                                 role="menuitem"
                                 className="db-nav-link"
-                                href="#contact"
+                                href="/#contact"
                                 onClick={handleLinkClick}
                             >
                                 Contact
