@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
@@ -9,6 +10,9 @@ const Contact = () => {
         message: "",
     });
 
+    const [sending, setSending] = useState(false);
+    const [statusMsg, setStatusMsg] = useState(null); // { type: 'success'|'error', text: string }
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -17,10 +21,43 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form Submitted:", formData);
-        // EmailJS integration will go here later
+        setStatusMsg(null);
+        setSending(true);
+
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        const templateParams = {
+            user_name: formData.name,
+            user_email: formData.email,
+            user_phone: formData.phone,
+            user_message: formData.message,
+        };
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
+                templateParams,
+                publicKey,
+            );
+            setStatusMsg({
+                type: "success",
+                text: "Message Sent. Thank You!",
+            });
+            setFormData({ name: "", email: "", phone: "", message: "" });
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setStatusMsg({
+                type: "error",
+                text: "Could not send message. Please try again later.",
+            });
+        } finally {
+            setSending(false);
+        }
     };
 
     return (
@@ -88,9 +125,29 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="db-contact__button">
-                        Submit
+                    <button
+                        type="submit"
+                        className="db-contact__button"
+                        disabled={sending}
+                    >
+                        {sending ? "Sending…" : "Submit"}
                     </button>
+
+                    {statusMsg && (
+                        <div
+                            role="status"
+                            aria-live="polite"
+                            className="formstatus"
+                            style={{
+                                color:
+                                    statusMsg.type === "success"
+                                        ? "#0b7a3d"
+                                        : "#8b0000",
+                            }}
+                        >
+                            {statusMsg.text}
+                        </div>
+                    )}
                 </form>
             </div>
         </section>

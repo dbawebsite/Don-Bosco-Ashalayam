@@ -116,6 +116,12 @@
     background-color: #b35318;
 }
 
+.formstatus {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     .cc-contact {
         padding: 40px 16px;

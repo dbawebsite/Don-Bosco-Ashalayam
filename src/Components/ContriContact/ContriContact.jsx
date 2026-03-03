@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContriContact.css";
 
 const ContriContact = () => {
@@ -10,6 +11,9 @@ const ContriContact = () => {
         details: "",
     });
 
+    const [sending, setSending] = useState(false);
+    const [statusMsg, setStatusMsg] = useState(null); // { type: 'success'|'error', text: string }
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -18,10 +22,51 @@ const ContriContact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("ContriContact Submitted:", formData);
-        // EmailJS integration will go here later
+        setStatusMsg(null);
+        setSending(true);
+
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env
+            .VITE_EMAILJS_TEMPLATE_CONTRIBUTION_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        const templateParams = {
+            user_name: formData.name,
+            user_email: formData.email,
+            user_phone: formData.phone,
+            contribution_type: formData.contributionType,
+            contribution_details: formData.details,
+        };
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
+                templateParams,
+                publicKey,
+            );
+            setStatusMsg({
+                type: "success",
+                text: "Thanks, Contribution Enquiry sent!",
+            });
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                contributionType: "",
+                details: "",
+            });
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setStatusMsg({
+                type: "error",
+                text: "Could not send enquiry. Please try again later.",
+            });
+        } finally {
+            setSending(false);
+        }
     };
 
     return (
@@ -107,17 +152,17 @@ const ContriContact = () => {
                             required
                         >
                             <option value="">Select contribution type</option>
-                            <option value="donations">
+                            <option value="Donations">
                                 Donations (Stationary / Kits / Other)
                             </option>
-                            <option value="food">Food and Nutrition</option>
-                            <option value="clothing">
+                            <option value="Food">Food and Nutrition</option>
+                            <option value="Clothing">
                                 Clothing and Essentials
                             </option>
-                            <option value="volunteer">
+                            <option value="Volunteer">
                                 Volunteer Work and Skills
                             </option>
-                            <option value="corporate">
+                            <option value="Corporate">
                                 Corporate / Group Collaborations
                             </option>
                         </select>
@@ -142,9 +187,29 @@ const ContriContact = () => {
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="cc-contact__button">
-                        Submit
+                    <button
+                        type="submit"
+                        className="cc-contact__button"
+                        disabled={sending}
+                    >
+                        {sending ? "Sending…" : "Submit"}
                     </button>
+
+                    {statusMsg && (
+                        <div
+                            role="status"
+                            aria-live="polite"
+                            className="formstatus"
+                            style={{
+                                color:
+                                    statusMsg.type === "success"
+                                        ? "#0b7a3d"
+                                        : "#8b0000",
+                            }}
+                        >
+                            {statusMsg.text}
+                        </div>
+                    )}
                 </form>
             </div>
         </section>
