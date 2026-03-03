@@ -9,6 +9,7 @@
 .errorpage h1 {
     font-size: 84px;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .errorpage a {
@@ -27,4 +28,16 @@
 .errorpage a:focus {
     background-color: #b35318;
     outline: none;
+}
+
+@media (max-width: 768px) {
+    .errorpage h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 386px) {
+    .errorpage h1 {
+        font-size: 32px;
+    }
 }

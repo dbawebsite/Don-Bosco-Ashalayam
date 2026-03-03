@@ -17,3 +17,7 @@ html {
     background: #fffbf6;
     color: #493129;
 }
+
+::placeholder {
+    opacity: 0.5;
+}

@@ -42,7 +42,7 @@ const Contact = () => {
                                 type="text"
                                 name="name"
                                 className="db-contact__input"
-                                placeholder="John Doe"
+                                placeholder="Name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -55,7 +55,7 @@ const Contact = () => {
                                 type="email"
                                 name="email"
                                 className="db-contact__input"
-                                placeholder="johndoe@email.com"
+                                placeholder="Email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
@@ -69,7 +69,7 @@ const Contact = () => {
                             type="tel"
                             name="phone"
                             className="db-contact__input"
-                            placeholder="0123456789"
+                            placeholder="Phone Number"
                             value={formData.phone}
                             onChange={handleChange}
                         />

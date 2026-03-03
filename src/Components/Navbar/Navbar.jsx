@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import LogoImage from "./../../assets/DonBoscoLogo.webp";
+import OpenMenu from "./../../assets/hamburger.webp";
+import CloseMenu from "./../../assets/cross.webp";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -121,7 +123,11 @@ export default function Navbar() {
                         aria-expanded={menuOpen}
                         onClick={() => setMenuOpen((v) => !v)}
                     >
-                        {menuOpen ? "Close" : "Open"}
+                        <img
+                            src={menuOpen ? CloseMenu : OpenMenu}
+                            alt={menuOpen ? "Close menu" : "Open menu"}
+                            className="db-nav-toggle__icon"
+                        />
                     </button>
                 </div>
             </nav>
@@ -163,7 +169,7 @@ export default function Navbar() {
                     <li role="none">
                         <a
                             className="db-nav-mobile__link"
-                            href="#contact"
+                            href="/#contact"
                             onClick={handleLinkClick}
                         >
                             Contact
