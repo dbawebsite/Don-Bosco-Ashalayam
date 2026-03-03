@@ -54,6 +54,9 @@
 }
 
 @media (max-width: 444px) {
+    .appfooter {
+        padding: 12px;
+    }
     .dbaname {
         font-size: 18px;
     }

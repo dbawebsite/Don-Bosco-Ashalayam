@@ -1,0 +1,161 @@
+.cc-contact {
+    padding: 60px 10%;
+}
+
+.cc-contact__container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffc9a7;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px #00000014;
+}
+
+.cc-contact__header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.cc-contact__title {
+    margin: 0;
+    font-size: 28px;
+    color: #06283d;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.cc-contact__subtitle {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #25344f;
+    background-color: transparent;
+}
+
+.cc-contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.cc-contact__row {
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.cc-contact__field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: transparent;
+}
+
+.cc-contact__label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #25344f;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cc-contact__input,
+.cc-contact__textarea,
+.cc-contact__select {
+    padding: 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.cc-contact__input:focus,
+.cc-contact__textarea:focus,
+.cc-contact__select:focus {
+    border-color: #ff7722;
+}
+
+.cc-contact__textarea {
+    resize: vertical;
+}
+
+.cc-contact__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #25344f 50%),
+        linear-gradient(135deg, #25344f 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) calc(1em + 2px),
+        calc(100% - 13px) calc(1em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.cc-contact__button {
+    padding: 12px 18px;
+    background-color: #ff7722;
+    color: #fafafa;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.cc-contact__button:hover {
+    background-color: #b35318;
+}
+
+@media (max-width: 768px) {
+    .cc-contact {
+        padding: 40px 16px;
+    }
+
+    .cc-contact__container {
+        padding: 28px;
+    }
+
+    .cc-contact__row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cc-contact__title {
+        font-size: 24px;
+    }
+
+    .cc-contact__subtitle {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cc-contact__container {
+        padding: 20px;
+    }
+
+    .cc-contact__title {
+        font-size: 22px;
+    }
+
+    .cc-contact__input,
+    .cc-contact__textarea,
+    .cc-contact__select {
+        font-size: 13px;
+    }
+
+    .cc-contact__button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}

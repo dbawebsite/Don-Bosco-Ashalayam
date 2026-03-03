@@ -7,6 +7,7 @@ import DonationImage from "./../../assets/ToyDonation.webp";
 import FoodImage from "./../../assets/DonationInKind.webp";
 import ClothingImage from "./../../assets/ClothesDonation.webp";
 import VolunteerImage from "./../../assets/VolunteerWork.webp";
+import ContriContact from "../../Components/ContriContact/ContriContact";
 
 const Contribute = () => {
     return (
@@ -168,11 +169,7 @@ const Contribute = () => {
                     </article>
                 </section>
 
-                {/* Placeholder for the contact component you'll add later — no CTA text or buttons here */}
-                <div
-                    id="contribute-contact"
-                    className="contribute-contact-placeholder"
-                />
+                <ContriContact />
             </main>
 
             <Footer />
