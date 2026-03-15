@@ -43,12 +43,9 @@ const About = () => {
                                 Mission
                             </h3>
                             <p className="db-about__card-body">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Integer at ullamcorper neque.
-                                Vivamus fermentum, nunc et placerat volutpat,
-                                mauris lacus tempus justo, non efficitur nisl
-                                lacus et magna. Quisque pulvinar ipsum et neque
-                                suscipit, vitae convallis quam gravida.
+                                Building dreams and shaping the lives of at-risk
+                                children and young people for a happy, healthy,
+                                and harmonious society.
                             </p>
                         </article>
 
@@ -63,11 +60,14 @@ const About = () => {
                                 Vision
                             </h3>
                             <p className="db-about__card-body">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Suspendisse potenti. Sed vitae
-                                mi id sapien tristique vehicula. Nam nec arcu
-                                non orci faucibus fermentum. Donec vitae mi ut
-                                ipsum dictum convallis.
+                                To empower at-risk children and youth to become
+                                agents of personal and social transformation. We
+                                provide safe environments that protect them from
+                                exploitation and neglect while supporting their
+                                journey toward personal growth, freedom, and
+                                dignity. We also collaborate with organizations
+                                and advocate for children’s rights at national
+                                and international levels.
                             </p>
                         </article>
 
@@ -82,11 +82,13 @@ const About = () => {
                                 Philosophy
                             </h3>
                             <p className="db-about__card-body">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Pellentesque habitant morbi
-                                tristique senectus et netus et malesuada fames
-                                ac turpis egestas. Maecenas non purus quis justo
-                                tincidunt interdum quis sed arcu.
+                                We believe every child deserves dignity,
+                                protection, and the opportunity to grow in a
+                                safe and nurturing environment. Our work is
+                                rooted in compassion, empowerment, and long-term
+                                rehabilitation. Through a holistic approach, we
+                                help children rebuild their confidence and move
+                                toward independent and responsible lives.
                             </p>
                         </article>
                     </div>
@@ -102,34 +104,34 @@ const About = () => {
                             />
                             <div className="db-about__feature-content">
                                 <h3 className="db-about__feature-title">
-                                    Title 1
+                                    From the Streets to Mainstream Society
                                 </h3>
                                 <p className="db-about__feature-text">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Curabitur sit amet eros ac
-                                    justo bibendum faucibus. Praesent
-                                    ullamcorper, massa id tincidunt faucibus,
-                                    nunc velit aliquet arcu, in bibendum velit
-                                    ipsum a sapien. Integer at urna id lacus
-                                    ultrices sollicitudin.
+                                    Don Bosco Ashalayam follows a structured
+                                    six-phase strategy to help children
+                                    transition from life on the streets into
+                                    mainstream society. The process begins with
+                                    Street Contact, where outreach teams build
+                                    trust and rapport with children living in
+                                    vulnerable conditions.
                                     <br />
-                                    <br /> Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit. Vestibulum ante
-                                    ipsum primis in faucibus orci luctus et
-                                    ultrices posuere cubilia curae; Duis sed
-                                    arcu ut lacus placerat dapibus. Sed
-                                    faucibus, urna quis volutpat tincidunt,
-                                    ipsum lorem luctus lectus, vitae gravida
-                                    erat sem non risus.
+                                    <br /> Once trust is established, the
+                                    Weaning phase focuses on providing
+                                    education, protection, and emotional
+                                    support. Children then enter the Grooming
+                                    stage, where they experience a safe and
+                                    nurturing environment with learning
+                                    opportunities, recreation, and respect.
                                     <br />
                                     <br />
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vestibulum ante ipsum
-                                    primis in faucibus orci luctus et ultrices
-                                    posuere cubilia curae; Duis sed arcu ut
-                                    lacus placerat dapibus. Sed faucibus, urna
-                                    quis volutpat tincidunt, ipsum lorem luctus
-                                    lectus, vitae gravida erat sem non risus.
+                                    The next stages include Training, where
+                                    children gain education and essential life
+                                    skills, followed by Earning, which empowers
+                                    them through vocational opportunities and
+                                    employment. Finally, the Homing stage helps
+                                    them reintegrate into society as
+                                    independent, responsible, and confident
+                                    citizens.
                                 </p>
                             </div>
                         </div>
@@ -143,34 +145,35 @@ const About = () => {
                             />
                             <div className="db-about__feature-content">
                                 <h3 className="db-about__feature-title">
-                                    Title 2
+                                    Our Objectives and Services
                                 </h3>
                                 <p className="db-about__feature-text">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vestibulum ante ipsum
-                                    primis in faucibus orci luctus et ultrices
-                                    posuere cubilia curae; Duis sed arcu ut
-                                    lacus placerat dapibus. Sed faucibus, urna
-                                    quis volutpat tincidunt, ipsum lorem luctus
-                                    lectus, vitae gravida erat sem non risus.
+                                    Our work focuses on rescuing and
+                                    rehabilitating homeless and at-risk children
+                                    by providing counseling, safety, and a
+                                    supportive environment. We strive to reunite
+                                    runaway children with their families
+                                    whenever possible while ensuring their
+                                    well-being after repatriation.
                                     <br />
                                     <br />
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vestibulum ante ipsum
-                                    primis in faucibus orci luctus et ultrices
-                                    posuere cubilia curae; Duis sed arcu ut
-                                    lacus placerat dapibus. Sed faucibus, urna
-                                    quis volutpat tincidunt, ipsum lorem luctus
-                                    lectus, vitae gravida erat sem non risus.
+                                    For children who cannot immediately return
+                                    home, we provide secure shelter, medical
+                                    care, proper nutrition, education, and
+                                    vocational training. These services help
+                                    them develop the skills and confidence
+                                    needed for a stable and independent future.
                                     <br />
                                     <br />
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vestibulum ante ipsum
-                                    primis in faucibus orci luctus et ultrices
-                                    posuere cubilia curae; Duis sed arcu ut
-                                    lacus placerat dapibus. Sed faucibus, urna
-                                    quis volutpat tincidunt, ipsum lorem luctus
-                                    lectus, vitae gravida erat sem non risus.
+                                    We also encourage excellence in sports and
+                                    cultural activities while offering
+                                    value-based education and life-skills
+                                    training for street and migrant youth.
+                                    Additionally, we conduct research and
+                                    documentation to strengthen childcare
+                                    practices and improve initiatives that
+                                    support vulnerable children and young
+                                    people.
                                 </p>
                             </div>
                         </div>
