@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import heroImage from "./assets/hero.webp";
@@ -9,6 +9,15 @@ import Contact from "./Components/Contact/Contact";
 import Info from "./Components/Info/Info";
 
 const App = () => {
+    useEffect(() => {
+        if (window.location.hash === "#contact") {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "instant",
+            });
+        }
+    }, []);
+
     return (
         <>
             <Navbar />
